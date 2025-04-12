@@ -50,8 +50,8 @@ Career Compass is a comprehensive career guidance web application designed to he
 
 1. Clone the repository:
 ```bash
-git clone [repository-url]
-cd career-compass
+git clone https://github.com/create-with-vishwesh/Final_project.git
+cd Final_project
 ```
 
 2. Open the project:
