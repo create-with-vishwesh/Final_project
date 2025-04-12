@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Quiz - Career Compass</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script type="module" src="js/config.js"></script>
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/quiz.js"></script>
+    <script type="module" src="js/suggestions.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Career Compass</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quiz.html" class="active">Skill Quiz</a></li>
+                <li><a href="suggestions.html">Suggestions</a></li>
+                <li><a href="resume-tips.html">Resume Tips</a></li>
+                <li><a href="advisor.html">Advisor</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <div class="auth-links">
+                <a href="login.html" class="login-btn">Log In</a>
+                <a href="signup.html" class="signup-btn">Sign Up</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="quiz-container">
+        <section class="quiz-section animate__animated animate__fadeIn">
+            <h1>Career Skills Assessment</h1>
+            <p class="quiz-description">Discover your ideal career path through our comprehensive skills assessment. Answer the following questions thoughtfully to receive personalized career recommendations.</p>
+            
+            <div class="progress-bar">
+                <div class="progress" style="width: 0%"></div>
+                <span class="progress-text">0% Complete</span>
+            </div>
+            
+            <form id="quiz-form" class="quiz-form">
+                <div class="question-container">
+                    <h3>Technical Skills & Interests</h3>
+                    
+                    <div class="question">
+                        <label>Do you enjoy working with data and numbers?</label>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="data" value="yes" required>
+                                <span>Yes</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="data" value="no">
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <label>How comfortable are you with learning new technologies?</label>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="tech" value="very" required>
+                                <span>Very Comfortable</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="tech" value="somewhat">
+                                <span>Somewhat Comfortable</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="tech" value="not">
+                                <span>Not Comfortable</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <label>Which technical area interests you the most?</label>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="tech_interest" value="frontend" required>
+                                <span>User Interface & Design</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="tech_interest" value="backend">
+                                <span>Systems & Infrastructure</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="tech_interest" value="data">
+                                <span>Data & Analytics</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="tech_interest" value="security">
+                                <span>Security & Networks</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-container">
+                    <h3>Soft Skills & Work Style</h3>
+                    
+                    <div class="question">
+                        <label>How would you rate your communication skills?</label>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="communication" value="excellent" required>
+                                <span>Excellent</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="communication" value="good">
+                                <span>Good</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="communication" value="fair">
+                                <span>Fair</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <label>Do you prefer working in teams or independently?</label>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="workstyle" value="team" required>
+                                <span>Team</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="workstyle" value="independent">
+                                <span>Independent</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="workstyle" value="both">
+                                <span>Both</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <label>How do you handle pressure and deadlines?</label>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="pressure" value="thrive" required>
+                                <span>I thrive under pressure</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="pressure" value="manage">
+                                <span>I can manage it well</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="pressure" value="prefer_less">
+                                <span>I prefer less pressure</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-container">
+                    <h3>Career Goals & Environment</h3>
+                    
+                    <div class="question">
+                        <label>What type of work environment do you prefer?</label>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="environment" value="office" required>
+                                <span>Traditional Office</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="environment" value="remote">
+                                <span>Remote Work</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="environment" value="hybrid">
+                                <span>Hybrid</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <label>What's most important to you in a career?</label>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="priority" value="growth" required>
+                                <span>Growth & Learning</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="priority" value="stability">
+                                <span>Stability & Security</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="priority" value="impact">
+                                <span>Impact & Innovation</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="priority" value="balance">
+                                <span>Work-Life Balance</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-button">Get Career Recommendations</button>
+            </form>
+
+            <div id="results-section" class="results-section" style="display: none;">
+                <h2>Your Career Matches</h2>
+                <p class="results-description">Based on your responses, here are the career paths that best match your skills and interests:</p>
+                
+                <div class="career-cards-container">
+                    <div class="career-card tech">
+                        <div class="career-header">
+                            <h3>Software Developer</h3>
+                            <span class="match-score">95% Match</span>
+                        </div>
+                        <div class="career-content">
+                            <p class="career-description">Design and develop software applications using programming languages and development tools.</p>
+                            <div class="skills-required">
+                                <h4>Key Skills</h4>
+                                <ul>
+                                    <li>Programming</li>
+                                    <li>Problem Solving</li>
+                                    <li>Analytical Thinking</li>
+                                </ul>
+                            </div>
+                            <div class="career-details">
+                                <p><strong>Growth Potential:</strong> High</p>
+                                <p><strong>Work Environment:</strong> Office/Remote</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="career-card data">
+                        <div class="career-header">
+                            <h3>Data Analyst</h3>
+                            <span class="match-score">88% Match</span>
+                        </div>
+                        <div class="career-content">
+                            <p class="career-description">Analyze complex data sets to identify trends and provide insights for business decision-making.</p>
+                            <div class="skills-required">
+                                <h4>Key Skills</h4>
+                                <ul>
+                                    <li>Data Analysis</li>
+                                    <li>Statistical Methods</li>
+                                    <li>Data Visualization</li>
+                                </ul>
+                            </div>
+                            <div class="career-details">
+                                <p><strong>Growth Potential:</strong> High</p>
+                                <p><strong>Work Environment:</strong> Office/Hybrid</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="career-card communication">
+                        <div class="career-header">
+                            <h3>Project Manager</h3>
+                            <span class="match-score">82% Match</span>
+                        </div>
+                        <div class="career-content">
+                            <p class="career-description">Lead and coordinate projects, teams, and resources to achieve business objectives.</p>
+                            <div class="skills-required">
+                                <h4>Key Skills</h4>
+                                <ul>
+                                    <li>Leadership</li>
+                                    <li>Communication</li>
+                                    <li>Organization</li>
+                                </ul>
+                            </div>
+                            <div class="career-details">
+                                <p><strong>Growth Potential:</strong> High</p>
+                                <p><strong>Work Environment:</strong> Office/Hybrid</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Career Compass. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module">
+        import CareerMatcher from './js/career-matcher.js';
+
+        // Initialize career matcher
+        const careerMatcher = new CareerMatcher();
+
+        // Toggle mobile menu
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+
+        // Form submission
+        document.getElementById('quiz-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Collect form responses
+            const formData = new FormData(this);
+            const responses = {};
+            for (const [key, value] of formData.entries()) {
+                responses[key] = value;
+            }
+            
+            // Get career matches
+            const careerMatches = careerMatcher.calculateCareerMatches(responses);
+            
+            // Update results section
+            const careerCardsContainer = document.querySelector('.career-cards-container');
+            careerCardsContainer.innerHTML = '';
+            
+            careerMatches.forEach(career => {
+                const careerCard = document.createElement('div');
+                careerCard.className = 'career-card';
+                careerCard.innerHTML = `
+                    <div class="career-header">
+                        <h3>${career.title}</h3>
+                        <span class="match-score">${career.matchScore}% Match</span>
+                    </div>
+                    <div class="career-content">
+                        <p class="career-description">${career.description}</p>
+                        <div class="skills-required">
+                            <h4>Key Skills</h4>
+                            <ul>
+                                ${career.skills.map(skill => `<li>${skill}</li>`).join('')}
+                            </ul>
+                        </div>
+                        <div class="career-details">
+                            <p><strong>Growth Potential:</strong> ${career.growthPotential}</p>
+                            <p><strong>Work Environment:</strong> ${career.environment}</p>
+                        </div>
+                    </div>
+                `;
+                careerCardsContainer.appendChild(careerCard);
+            });
+            
+            // Hide the quiz form
+            this.style.display = 'none';
+            
+            // Show the results section with animation
+            const resultsSection = document.getElementById('results-section');
+            resultsSection.style.display = 'block';
+            resultsSection.classList.add('animate__animated', 'animate__fadeIn');
+            
+            // Scroll to results
+            resultsSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

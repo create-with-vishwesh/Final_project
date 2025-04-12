@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Career Compass</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <link rel="stylesheet" href="css/about.css">
+    <script type="module" src="js/config.js"></script>
+    <script type="module" src="js/main.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Career Compass</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quiz.html">Skill Quiz</a></li>
+                <li><a href="suggestions.html" >Suggestions</a></li>
+                <li><a href="resume-tips.html">Resume Tips</a></li>
+                <li><a href="advisor.html">Advisor</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+            </ul>
+            <div class="auth-links">
+                <a href="login.html" class="login-btn">Log In</a>
+                <a href="signup.html" class="signup-btn">Sign Up</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="about-container">
+        <section class="about-section animate__animated animate__fadeIn">
+            <h1>About Career Compass</h1>
+            <p class="section-description">Guiding you towards your ideal career path with innovative tools and expert insights.</p>
+
+            <div class="mission-vision">
+                <div class="mission-card">
+                    <h2>Our Mission</h2>
+                    <p>To empower individuals in their career journey by providing personalized guidance, cutting-edge assessment tools, and expert resources that help them make informed decisions about their professional future.</p>
+                </div>
+                <div class="vision-card">
+                    <h2>Our Vision</h2>
+                    <p>To become the world's most trusted career guidance platform, helping millions of people discover and pursue fulfilling careers that align with their skills, passions, and values.</p>
+                </div>
+            </div>
+
+            <div class="core-values">
+                <h2>Our Core Values</h2>
+                <div class="values-grid">
+                    <div class="value-card animate__animated animate__fadeInUp">
+                        <h3>Innovation</h3>
+                        <p>Continuously improving our tools and methods to provide cutting-edge career guidance solutions.</p>
+                    </div>
+                    <div class="value-card animate__animated animate__fadeInUp" style="animation-delay: 0.2s">
+                        <h3>Personalization</h3>
+                        <p>Delivering tailored advice and recommendations that consider each individual's unique profile.</p>
+                    </div>
+                    <div class="value-card animate__animated animate__fadeInUp" style="animation-delay: 0.4s">
+                        <h3>Integrity</h3>
+                        <p>Maintaining honest and transparent relationships with our users while protecting their privacy.</p>
+                    </div>
+                    <div class="value-card animate__animated animate__fadeInUp" style="animation-delay: 0.6s">
+                        <h3>Excellence</h3>
+                        <p>Striving for the highest quality in all our services and user experiences.</p>
+                    </div>
+                    <div class="value-card animate__animated animate__fadeInUp" style="animation-delay: 0.8s">
+                        <h3>Collaboration</h3>
+                        <p>Fostering teamwork and partnerships to create comprehensive career solutions that benefit all stakeholders.</p>
+                    </div>
+                    <div class="value-card animate__animated animate__fadeInUp" style="animation-delay: 1.0s">
+                        <h3>Accessibility</h3>
+                        <p>Ensuring our services are available and beneficial to people from all backgrounds and circumstances.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-section">
+                <h2>Our Team</h2>
+                <div class="team-grid">
+                    <div class="team-card animate__animated animate__fadeInUp">
+                        <div class="team-member-image"></div>
+                        <h3>Yug Patel</h3>
+                        <p class="role">Head of Technology</p>
+                        <p class="bio">Technology leader with 10+ years experience architecting scalable systems and driving technical innovation for career platforms.</p>
+                    </div>
+                    <div class="team-card animate__animated animate__fadeInUp" style="animation-delay: 0.2s">
+                        <div class="team-member-image"></div>
+                        <h3>Vedant Chauhan</h3>
+                        <p class="role">UI/UX Designer</p>
+                        <p class="bio">Creative designer specializing in user-centered interfaces that make career exploration intuitive and engaging.</p>
+                    </div>
+                    <div class="team-card animate__animated animate__fadeInUp" style="animation-delay: 0.4s">
+                        <div class="team-member-image"></div>
+                        <h3>Khush Desai</h3>
+                        <p class="role">Frontend Developer</p>
+                        <p class="bio">Skilled in building responsive web applications with modern frameworks to deliver seamless career guidance experiences.</p>
+                    </div>
+                    <div class="team-card animate__animated animate__fadeInUp" style="animation-delay: 0.6s">
+                        <div class="team-member-image"></div>
+                        <h3>Vishwesh Panchal</h3>
+                        <p class="role">Backend Developer</p>
+                        <p class="bio">Specializes in developing robust APIs and database architectures to power our career recommendation engine.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Career Compass. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle mobile menu
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

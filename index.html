@@ -1,0 +1,79 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Compass - Your Career Guidance Partner</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="js/config.js"></script>
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/quiz.js"></script>
+    <script type="module" src="js/suggestions.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Career Compass</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="quiz.html">Skill Quiz</a></li>
+                <li><a href="suggestions.html" >Suggestions</a></li>
+                <li><a href="resume-tips.html">Resume Tips</a></li>
+                <li><a href="advisor.html">Advisor</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <div class="auth-links">
+                <a href="login.html" class="login-btn">Log In</a>
+                <a href="signup.html" class="signup-btn">Sign Up</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Discover Your Perfect Career Path</h1>
+                <p>Take our comprehensive skill assessment quiz and get personalized career recommendations tailored to
+                    your unique abilities and interests.</p>
+                <a href="quiz.html" class="cta-button">Start Quiz</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <h3>Skill Assessment</h3>
+                <p>Evaluate your skills and interests through our interactive quiz.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Career Matching</h3>
+                <p>Get personalized career recommendations based on your profile.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Expert Guidance</h3>
+                <p>Access professional tips and insights for career development.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Career Compass. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle mobile menu
+        document.querySelector('.hamburger').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

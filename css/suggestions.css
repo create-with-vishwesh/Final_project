@@ -1,0 +1,241 @@
+/* Suggestions Page Styling */
+
+.suggestions-container {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.suggestions-section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-description {
+    max-width: 800px;
+    margin: 1rem auto 2rem;
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Filters Styling */
+.filters-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.filter-btn.active {
+    background: linear-gradient(45deg, #4a90e2, #67b26f);
+    color: white;
+}
+
+/* Grid Layout */
+.suggestions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+/* Career Card Styling */
+.career-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.career-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    border-color: rgba(52, 152, 219, 0.2);
+}
+
+.career-header {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+    padding: 1.2rem;
+    position: relative;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.career-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.career-header h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.career-content {
+    padding: 1.2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.career-description {
+    color: #4a5568;
+    line-height: 1.7;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Skills List Styling */
+.skills-list {
+    margin-bottom: 1.5rem;
+}
+
+.skills-list h4 {
+    color: #333;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.skills-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-list li {
+    padding: 0.5rem 0;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.skills-list li::before {
+    content: '✓';
+    color: #2ecc71;
+    font-weight: normal;
+    font-size: 0.9rem;
+}
+
+/* Career Details Styling */
+.career-details {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding-top: 1.2rem;
+    margin-top: auto;
+}
+
+.career-details p {
+    margin: 0.5rem 0;
+    color: #555;
+}
+
+.career-details strong {
+    color: #333;
+}
+
+.education-requirements,
+.industry-trends {
+    margin-top: 1.5rem;
+}
+
+.education-requirements h4,
+.industry-trends h4 {
+    color: #333;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.education-requirements ul,
+.industry-trends ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.education-requirements li,
+.industry-trends li {
+    padding: 0.4rem 0;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.education-requirements li::before,
+.industry-trends li::before {
+    content: '→';
+    color: #67b26f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .suggestions-container {
+        padding: 1rem;
+    }
+
+    .suggestions-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .career-header h3 {
+        font-size: 1.2rem;
+    }
+
+    .filter-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .career-details {
+        padding-top: 1rem;
+    }
+
+    .education-requirements,
+    .industry-trends {
+        margin-top: 1rem;
+    }
+
+    .education-requirements h4,
+    .industry-trends h4 {
+        font-size: 1rem;
+    }
+
+    .education-requirements li,
+    .industry-trends li {
+        padding: 0.3rem 0;
+    }
+}
